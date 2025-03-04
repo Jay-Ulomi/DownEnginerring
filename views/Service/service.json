@@ -1,0 +1,46 @@
+{
+  "services": [
+    {
+      "title": "Optical Fiber Networks",
+      "icon": "assets/images/icons/connector.png",
+      "image": "assets/images/resource/service1.png",
+      "description": "Construction and maintenance of high-speed fiber optic networks.",
+      "id": 1
+    },
+    {
+      "title": "Telecom Tower Construction",
+      "icon": "assets/images/icons/telecommunication.png",
+      "image": "assets/images/resource/service2.png",
+      "description": "Design and development of telecom towers for network expansion.",
+      "id": 2
+    },
+    {
+      "title": "Passive Telecom Solutions",
+      "icon": "assets/images/icons/switch.png",
+      "image": "assets/images/resource/service3.png",
+      "description": "Provision of colocation enhancements and energy solutions.",
+      "id": 3
+    },
+    {
+      "title": "Smart City Deployments",
+      "icon": "https://cdn-icons-png.flaticon.com/512/3063/3063089.png",
+      "image": "assets/images/resource/service-1.jpg",
+      "description": "Integration of IoT and cloud-based solutions for smart cities.",
+      "id": 4
+    },
+    {
+      "title": "Renewable Energy Solutions",
+      "icon": "https://cdn-icons-png.flaticon.com/512/484/484613.png",
+      "image": "assets/images/resource/service-1.jpg",
+      "description": "Development of solar, wind, and hydro energy infrastructure.",
+      "id": 5
+    },
+    {
+      "title": "Network Maintenance Services",
+      "icon": "https://cdn-icons-png.flaticon.com/512/1145/1145224.png",
+      "image": "assets/images/resource/service6.png",
+      "description": "Ongoing support and maintenance for telecom infrastructure.",
+      "id": 6
+    }
+  ]
+}

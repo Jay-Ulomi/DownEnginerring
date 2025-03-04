@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "title": "Nationwide Fiber Optic Deployment",
+    "image": "assets/images/gallery/project-1.png",
+    "description": "Delivering high-speed connectivity through fiber optic networks.",
+    "role": "Turnkey Installation"
+
+  },
+  {
+    "id": 2,
+    "title": "Telecom Tower Construction",
+    "image": "assets/images/gallery/project-2.png",
+    "description": "Designing and building telecom towers to expand network coverage.",
+    "role": "Design & Build"
+
+  },
+  {
+    "id": 3,
+    "title": "Electrical Infrastructure Development",
+    "image": "assets/images/gallery/project-3.png",
+    "description": "Engineering and installing electrical solutions for various infrastructures.",
+    "role": "Engineering & Installation"
+  
+  },
+  {
+    "id": 4,
+    "title": "Data Center & Network Cabling",
+    "image": "assets/images/gallery/project-4.png",
+    "description": "Implementing structured cabling solutions for data centers.",
+    "role": "Full Implementation"
+   
+  },
+  {
+    "id": 5,
+    "title": "Rural Connectivity Solutions",
+    "image": "assets/images/gallery/project-5.png",
+    "description": "Expanding network reach with rural connectivity solutions.",
+    "role": "Design, Supply & Installation"
+   
+  },
+  {
+    "id": 6,
+    "title": "Smart City Infrastructure",
+    "image": "assets/images/gallery/project-6.png",
+    "description": "Developing innovative infrastructure for smart cities.",
+    "role": "Planning & Execution"
+  
+  }
+]

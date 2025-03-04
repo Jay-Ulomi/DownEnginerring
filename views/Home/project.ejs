@@ -1,0 +1,42 @@
+<!-- Projects Section Four -->
+<section class="projects-section-four">
+    <div class="auto-container">
+        <!-- Sec Title -->
+        <div class="sec-title centered">
+            <span class="icon flaticon-telephone"></span>
+            <h2>Our <span>Completed Projects</span></h2>
+            <div class="text">Delivering Excellence in Telecom, Fiber Optic, and Civil Engineering Projects</div>
+        </div>
+        <div class="masonry-items-container row clearfix">
+            <% projects.forEach(project=> { %>
+                <!-- Gallery Block Four -->
+                <div class="gallery-block-four masonry-item col-lg-4 col-md-6 col-sm-12">
+                    <div class="inner-box">
+                        <div class="image">
+                            <a href="/projects/<%= project.id %>">
+                                <img src="<%= project.image %>" alt="<%= project.title %>" />
+                            </a>
+                            <div class="overlay-content">
+                                <div class="content">
+                                    <a class="plus fa fa-plus" href="/projects/<%= project.id %>"></a>
+                                    <h4><a href="/projects/<%= project.id %>">
+                                            <%= project.title %>
+                                        </a></h4>
+                                    <div class="designation">Our Role: <span>
+                                            <%= project.role %>
+                                        </span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <% }) %>
+        </div>
+
+        <div class="lower-text">
+            Want to see more of our engineering projects? <a href="/projects">View More Projects</a>
+        </div>
+
+    </div>
+</section>
+<!-- End Projects Section Four -->

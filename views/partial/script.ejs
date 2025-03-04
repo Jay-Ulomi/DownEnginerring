@@ -1,0 +1,131 @@
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="assets/js/jquery.fancybox.js"></script>
+<script src="assets/js/appear.js"></script>
+<script src="assets/js/parallax.min.js"></script>
+<script src="assets/js/tilt.jquery.min.js"></script>
+<script src="assets/js/jquery.paroller.min.js"></script>
+<script src="assets/js/owl.js"></script>
+<script src="assets/js/wow.js"></script>
+<script src="assets/js/mixitup.js"></script>
+<script src="assets/js/validate.js"></script>
+<script src="assets/js/isotope.js"></script>
+<script src="assets/js/nav-tool.js"></script>
+<script src="assets/js/jquery-ui.js"></script>
+<script src="assets/js/script.js"></script>
+<script src="assets/js/color-settings.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+          e.preventDefault();
+      
+          const formData = new FormData(this);
+          console.log('Form data:');
+          for (let [key, value] of formData.entries()) {
+            console.log(`${key}: ${value}`);
+          }
+          const data = Object.fromEntries(formData);
+      
+          const statusMessage = document.getElementById('statusMessage');
+      
+          fetch('/contact', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+          })
+            .then(function(response) { return response.json(); })
+            .then(function(data) {
+              if (data.success) {
+                statusMessage.textContent = 'Your message has been sent successfully!';
+                statusMessage.style.color = 'green';
+              } else {
+                statusMessage.textContent = data.error || 'Something went wrong. Please try again.';
+                statusMessage.style.color = 'red';
+              }
+              statusMessage.style.display = 'block';
+      
+              // Clear status after 5 seconds
+              setTimeout(() => {
+                statusMessage.style.display = 'none';
+              }, 5000);
+            })
+            .catch(function(error) {
+              console.error('Error:', error);
+              statusMessage.textContent = 'Failed to send your message. Please try again later.';
+              statusMessage.style.color = 'red';
+              statusMessage.style.display = 'block';
+      
+              // Clear status after 5 seconds
+              setTimeout(() => {
+                statusMessage.style.display = 'none';
+              }, 5000);
+            });
+        });
+      });
+</script>
+  
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const searchInput = document.getElementById("search-input");
+    const searchForm = document.getElementById("search-form");
+    const resultsContainer = document.getElementById("search-results");
+
+    function searchContent(query) {
+      resultsContainer.innerHTML = "";
+      if (query.length < 2) return;
+
+      let contentElements = document.querySelectorAll("h1, h2, h3, p, a");
+      let results = [];
+
+      contentElements.forEach(element => {
+        if (element.textContent.toLowerCase().includes(query.toLowerCase())) {
+          let id = element.id ? element.id : `search-${Math.random().toString(36).substr(2, 9)}`;
+          element.id = id; // Assign unique ID if not present
+          results.push(`<li><a href="#${id}" class="search-result">${element.textContent}</a></li>`);
+        }
+      });
+
+      if (results.length > 0) {
+        resultsContainer.innerHTML = `<ul>${results.join("")}</ul>`;
+      } else {
+        resultsContainer.innerHTML = "<p>No results found.</p>";
+      }
+    }
+
+    searchForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      let query = searchInput.value.trim();
+      searchContent(query);
+    });
+
+    // Smooth scroll when clicking a search result
+    document.addEventListener("click", function (e) {
+      if (e.target.classList.contains("search-result")) {
+        e.preventDefault();
+        let targetId = e.target.getAttribute("href").substring(1);
+        let targetElement = document.getElementById(targetId);
+        if (targetElement) {
+          targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }
+    });
+  });
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    let currentPath = window.location.pathname;
+    let navLinks = document.querySelectorAll(".navigation li a");
+
+    navLinks.forEach(link => {
+      if (link.getAttribute("href") === currentPath) {
+        link.parentElement.classList.add("current"); // Add 'current' class to the active menu item
+      } else {
+        link.parentElement.classList.remove("current");
+      }
+    });
+  });
+</script>
